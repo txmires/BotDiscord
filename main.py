@@ -1,3 +1,4 @@
+from concurrent.futures import process
 import discord
 from discord.ext import commands
 import random
@@ -44,4 +45,7 @@ async def calcular(ctx, expression):
 async def segredo(ctx):
     await ctx.author.send("curioso...")
 
-client.run('OTY2Njc5MDU5MjUxNzQwNzYz.YmFQBw.bFpOFNVhD_2tdessXxJB-o1xrCg')
+with open("token.0.txt", "r", encoding="utf-8") as f:
+    bottoken = f.read()
+
+client.run(bottoken)
